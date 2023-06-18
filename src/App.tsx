@@ -1,11 +1,15 @@
 import "./App.css";
-
-import { MuiTooltip } from "./components/muiTooltip";
+import { MuiLoading } from "./components/muiLoading";
+import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import { LocalizationProvider } from "@mui/lab";
+import { MuiDate } from "./components/muiDate";
 
 function App() {
   return (
     <>
-      <MuiTooltip />
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <MuiDate />
+      </LocalizationProvider>
     </>
   );
 }
